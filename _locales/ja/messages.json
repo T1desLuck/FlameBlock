@@ -1,0 +1,140 @@
+{
+  "extName": {
+    "message": "FlameBlock — 広告ブロッカー"
+  },
+  "extDescription": {
+    "message": "広告とトラッカーを高度にブロック: ネットワークフィルターリスト、コスメティックフィルタリング、ヒューリスティック検知、そしてポップアンダーや広告ブロック検出スクリプトに対抗するMAIN-worldスクリプトレットを搭載。完全にローカルで動作し、サーバーには一切データを送信しません。"
+  },
+  "pause_all_title": {
+    "message": "すべてのサイトで一時停止"
+  },
+  "resume_protection_title": {
+    "message": "保護を再開"
+  },
+  "this_site": {
+    "message": "このサイト"
+  },
+  "protection_on": {
+    "message": "保護は有効です"
+  },
+  "ads_allowed_here": {
+    "message": "このサイトでは広告が許可されています"
+  },
+  "on_page": {
+    "message": "このページで"
+  },
+  "total_blocked_label": {
+    "message": "累計ブロック数"
+  },
+  "reload_page": {
+    "message": "ページを再読み込み"
+  },
+  "extension_settings": {
+    "message": "拡張機能の設定"
+  },
+  "options_subtitle": {
+    "message": "拡張機能の詳細設定"
+  },
+  "section_language": {
+    "message": "言語"
+  },
+  "language_hint": {
+    "message": "通常はブラウザの言語から自動的に判定されます。手動で選ぶこともでき、その場合は選択内容が保存されます。"
+  },
+  "language_auto": {
+    "message": "自動(デフォルト)"
+  },
+  "section_main_settings": {
+    "message": "基本設定"
+  },
+  "master_enabled_title": {
+    "message": "拡張機能を有効化"
+  },
+  "master_enabled_hint": {
+    "message": "全体のオン/オフスイッチです。オフにすると、すべてのサイトでFlameBlockが一時的に無効になります。"
+  },
+  "block_ads_title": {
+    "message": "広告のブロック"
+  },
+  "block_ads_hint": {
+    "message": "既知の広告ネットワークへのリクエストをネットワークレベルでブロックします。"
+  },
+  "block_trackers_title": {
+    "message": "トラッカーのブロック"
+  },
+  "block_trackers_hint": {
+    "message": "サイト上のアクセス解析カウンターや行動追跡スクリプトをブロックします。"
+  },
+  "stealth_mode_title": {
+    "message": "ステルスモード"
+  },
+  "stealth_mode_hint": {
+    "message": "既知の広告ブロック検出スクリプトをネットワークレベルでブロックし、さらに軽量なスクリプトをページに直接挿入します(ポップアンダーや強制リダイレクトを防ぐためwindow.openにゲートをかけます)。対象サービスの一覧は随時更新されるもので、一度きりでも永久的な解決策でもありません。"
+  },
+  "cosmetic_filtering_title": {
+    "message": "コスメティックフィルタリング"
+  },
+  "cosmetic_filtering_hint": {
+    "message": "CSSパターンや「広告」「Sponsored」といった短いラベルをもとに、ページ上の広告ブロックを非表示にします。独立したネットワークリクエストでない場合にも有効です。"
+  },
+  "heuristic_iframe_title": {
+    "message": "iframeサイズによるヒューリスティック"
+  },
+  "badge_experimental": {
+    "message": "実験的"
+  },
+  "heuristic_iframe_hint": {
+    "message": "別ドメインから配信される、標準的な広告サイズ(300×250、728×90など)のiframeを非表示にします。サイトが自社のプロキシドメイン経由で配信する、通常のリストでは検出できない広告を捕捉します。誤検知のリスクがリストより高いため、デフォルトではオフです。"
+  },
+  "section_stats": {
+    "message": "統計"
+  },
+  "stat_total_blocked": {
+    "message": "累計ブロック数"
+  },
+  "stat_since": {
+    "message": "拡張機能の稼働開始日"
+  },
+  "section_whitelist": {
+    "message": "許可済みサイト"
+  },
+  "whitelist_hint": {
+    "message": "これらのサイトでは広告の表示を許可しています。切り替えスイッチは拡張機能のポップアップにあります。"
+  },
+  "whitelist_empty": {
+    "message": "リストは空です。"
+  },
+  "remove_button": {
+    "message": "削除"
+  },
+  "section_custom_rules": {
+    "message": "カスタムルール"
+  },
+  "custom_rules_hint": {
+    "message": "1行につき1つのルールです。ドメインだけを書くとブロック、<code>@@ドメイン</code>と書くと明示的に許可します(誤ってブロックされた場合など)。<code>!</code>で始まる行はコメントとして扱われます。"
+  },
+  "save_rules_button": {
+    "message": "ルールを保存"
+  },
+  "rules_saved": {
+    "message": "保存しました({count})"
+  },
+  "section_about": {
+    "message": "この拡張機能について"
+  },
+  "about_text_1": {
+    "message": "FlameBlockは完全に自己完結した拡張機能です。すべてのルールと設定はブラウザ内にローカル保存され、データがどこかへ送信されたり収集されたりすることはありません。アーカイブにはSPEC.md(仕組みの説明)とRESEARCH.md(ブロック技術の分析とChrome/Operaで実際に使える手法の検証)も含まれており、詳細に興味のある方はご覧いただけます。"
+  },
+  "about_text_2": {
+    "message": "この拡張機能はすべての人にとって完全に無料であり、これからもずっと無料です。もしお役に立てたなら、開発を支援していただけるととても嬉しいですが、それはあくまで任意です。"
+  },
+  "dev_label": {
+    "message": "開発者"
+  },
+  "email_label": {
+    "message": "メール"
+  },
+  "bic_label": {
+    "message": "BIC"
+  }
+}

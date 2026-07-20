@@ -31,7 +31,13 @@
     '[aria-label="Advertisement"]', '[aria-label="Реклама"]',
     '.yandex-rtb', '[id^="yandex_rtb"]', '[id^="yandex_ad"]', '[id^="R-A-"]',
     'div[id^="ad_"]', 'div[class^="ad_"]',
-    '.google-auto-placed'
+    '.google-auto-placed',
+    // cookie-consent баннеры (CMP) — самая слабая категория по тестам
+    '#onetrust-banner-sdk', '#onetrust-consent-sdk', '.onetrust-pc-dark-filter',
+    '#CybotCookiebotDialog', '#CybotCookiebotDialogBodyUnderlay',
+    '.qc-cmp2-container', '#didomi-host', '#usercentrics-root',
+    '[id^="cookiescript_"]', '[class*="cookie-consent"]', '[class*="cookie-banner"]',
+    '[class*="consent-banner"]', '[id*="consent-banner"]', '.cc-window', '.cc-banner',
   ].join(', ');
 
   // Короткие самостоятельные метки спонсорского контента. Намеренно требуем

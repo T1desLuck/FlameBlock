@@ -1,0 +1,144 @@
+:root {
+  --bg: #eef0f3;
+  --bg-hi: #ffffff;
+  --bg-lo: #c7cbd1;
+  --text: #1c1d20;
+  --text-soft: #767a82;
+  --accent: #b52b0e;
+  --accent-soft: rgba(181, 43, 14, 0.12);
+  --on: #1c9e5b;
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --radius-full: 999px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { padding: 16px; display: flex; flex-direction: column; gap: 14px; }
+
+/* ---------- header ---------- */
+
+.head { display: flex; align-items: center; justify-content: space-between; }
+
+.brand { display: flex; align-items: center; gap: 8px; }
+.logo { width: 26px; height: 26px; display: block; }
+.brand-name {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.icon-btn {
+  width: 34px; height: 34px;
+  border: none; border-radius: var(--radius-full);
+  background: var(--bg);
+  color: var(--text-soft);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px var(--bg-lo), -4px -4px 8px var(--bg-hi);
+  transition: box-shadow .15s ease, color .15s ease;
+}
+.icon-btn:active { box-shadow: inset 3px 3px 6px var(--bg-lo), inset -3px -3px 6px var(--bg-hi); }
+.icon-btn.is-paused { color: var(--accent); }
+
+/* ---------- neumorphic surfaces ---------- */
+
+.neu-out {
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  box-shadow: 6px 6px 14px var(--bg-lo), -6px -6px 14px var(--bg-hi);
+}
+
+/* ---------- site card ---------- */
+
+.site-card { padding: 14px 16px; }
+
+.site-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+
+.site-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.site-label { font-size: 11px; color: var(--text-soft); text-transform: uppercase; letter-spacing: .5px; }
+.hostname {
+  font-size: 14px; font-weight: 600;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  max-width: 190px;
+}
+
+.site-status { margin-top: 10px; font-size: 12px; color: var(--on); font-weight: 600; }
+.site-status.off { color: var(--accent); }
+
+/* ---------- toggle switch ---------- */
+
+.switch { position: relative; display: inline-block; width: 46px; height: 26px; flex-shrink: 0; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; inset: 0; cursor: pointer;
+  background: var(--bg);
+  border-radius: var(--radius-full);
+  box-shadow: inset 3px 3px 6px var(--bg-lo), inset -3px -3px 6px var(--bg-hi);
+  transition: background .2s ease;
+}
+.slider::before {
+  content: "";
+  position: absolute; left: 3px; top: 3px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--bg);
+  box-shadow: 2px 2px 5px var(--bg-lo), -2px -2px 5px var(--bg-hi);
+  transition: transform .2s ease, background .2s ease;
+}
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+/* ---------- stats ---------- */
+
+.stats-row { display: flex; gap: 10px; }
+.stat-card {
+  flex: 1;
+  padding: 12px 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+}
+.stat-num { font-size: 20px; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+.stat-label { font-size: 10.5px; color: var(--text-soft); text-align: center; }
+
+/* ---------- buttons ---------- */
+
+.text-btn {
+  align-self: center;
+  background: none; border: none;
+  color: var(--text-soft);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px 4px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.text-btn:hover { color: var(--text); }
+
+.foot { margin-top: 2px; }
+.settings-btn {
+  width: 100%;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 11px;
+  border: none;
+  color: var(--text);
+  font-size: 13px; font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow .15s ease;
+}
+.settings-btn:active { box-shadow: inset 4px 4px 8px var(--bg-lo), inset -4px -4px 8px var(--bg-hi); }
+.settings-btn svg { color: var(--text-soft); flex-shrink: 0; }
+
+/* ---------- RTL (арабский и другие языки справа-налево) ---------- */
+[dir="rtl"] .slider::before { left: auto; right: 3px; }
+[dir="rtl"] .switch input:checked + .slider::before { transform: translateX(-20px); }
