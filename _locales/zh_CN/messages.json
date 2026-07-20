@@ -1,0 +1,140 @@
+{
+  "extName": {
+    "message": "FlameBlock — 广告拦截器"
+  },
+  "extDescription": {
+    "message": "先进的广告与跟踪器拦截器:网络过滤列表、外观过滤、启发式检测,以及针对弹窗广告和反广告拦截脚本的 MAIN-world 脚本。完全本地运行,不会向任何服务器发送数据。"
+  },
+  "pause_all_title": {
+    "message": "在所有网站暂停"
+  },
+  "resume_protection_title": {
+    "message": "恢复防护"
+  },
+  "this_site": {
+    "message": "当前网站"
+  },
+  "protection_on": {
+    "message": "防护已开启"
+  },
+  "ads_allowed_here": {
+    "message": "该网站已允许显示广告"
+  },
+  "on_page": {
+    "message": "本页"
+  },
+  "total_blocked_label": {
+    "message": "累计拦截"
+  },
+  "reload_page": {
+    "message": "刷新页面"
+  },
+  "extension_settings": {
+    "message": "扩展程序设置"
+  },
+  "options_subtitle": {
+    "message": "扩展程序高级设置"
+  },
+  "section_language": {
+    "message": "语言"
+  },
+  "language_hint": {
+    "message": "默认根据浏览器语言自动检测,也可以手动选择,系统会记住您的选择。"
+  },
+  "language_auto": {
+    "message": "自动(默认)"
+  },
+  "section_main_settings": {
+    "message": "基本设置"
+  },
+  "master_enabled_title": {
+    "message": "扩展程序已启用"
+  },
+  "master_enabled_hint": {
+    "message": "总开关。关闭后会在所有网站临时停用 FlameBlock。"
+  },
+  "block_ads_title": {
+    "message": "广告拦截"
+  },
+  "block_ads_hint": {
+    "message": "在网络层拦截对已知广告网络的请求。"
+  },
+  "block_trackers_title": {
+    "message": "跟踪器拦截"
+  },
+  "block_trackers_hint": {
+    "message": "拦截网站上的统计计数器和行为跟踪脚本。"
+  },
+  "stealth_mode_title": {
+    "message": "隐身模式"
+  },
+  "stealth_mode_hint": {
+    "message": "在网络层拦截已知的反广告拦截脚本,并直接向页面注入一个轻量脚本(对 window.open 设置门槛,拦截弹出式广告和强制跳转)。该服务列表会持续更新——这不是一次性或永久性的解决方案。"
+  },
+  "cosmetic_filtering_title": {
+    "message": "外观过滤"
+  },
+  "cosmetic_filtering_hint": {
+    "message": "根据 CSS 特征以及\"广告\"/\"赞助内容\"之类的简短标签隐藏页面上的广告区块,即便它并非独立的网络请求。"
+  },
+  "heuristic_iframe_title": {
+    "message": "iframe 尺寸启发式检测"
+  },
+  "badge_experimental": {
+    "message": "实验性"
+  },
+  "heuristic_iframe_hint": {
+    "message": "隐藏来自其他域名、尺寸符合标准广告规格(300×250、728×90 等)的 iframe——用于捕获网站通过自有代理域名投放、常规列表无法识别的广告。默认关闭:误判风险高于常规列表。"
+  },
+  "section_stats": {
+    "message": "统计"
+  },
+  "stat_total_blocked": {
+    "message": "累计拦截数"
+  },
+  "stat_since": {
+    "message": "扩展程序启用于"
+  },
+  "section_whitelist": {
+    "message": "已允许的网站"
+  },
+  "whitelist_hint": {
+    "message": "您已在这些网站上允许显示广告——该开关可在扩展程序的弹出窗口中找到。"
+  },
+  "whitelist_empty": {
+    "message": "列表为空。"
+  },
+  "remove_button": {
+    "message": "移除"
+  },
+  "section_custom_rules": {
+    "message": "自定义规则"
+  },
+  "custom_rules_hint": {
+    "message": "每行一条规则。直接填域名表示拦截,<code>@@域名</code> 表示明确放行(用于纠正误拦截)。以 <code>!</code> 开头的行为注释。"
+  },
+  "save_rules_button": {
+    "message": "保存规则"
+  },
+  "rules_saved": {
+    "message": "已保存({count})"
+  },
+  "section_about": {
+    "message": "关于"
+  },
+  "about_text_1": {
+    "message": "FlameBlock 是一个完全独立运行的扩展程序。所有规则和设置都保存在您本地的浏览器中,不会向任何地方发送或收集任何数据。压缩包中还附带了 SPEC.md(说明各部分的构建方式)和 RESEARCH.md(拦截技术的分析,以及哪些在 Chrome/Opera 上真正可行),供对细节感兴趣的用户查阅。"
+  },
+  "about_text_2": {
+    "message": "本扩展程序对所有人完全免费,并将永远保持免费。如果它对您有所帮助,并且您愿意支持开发,我们将非常感激——但这完全取决于您自己的意愿。"
+  },
+  "dev_label": {
+    "message": "开发者"
+  },
+  "email_label": {
+    "message": "邮箱"
+  },
+  "bic_label": {
+    "message": "BIC"
+  }
+}

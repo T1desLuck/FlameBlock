@@ -1,0 +1,163 @@
+:root {
+  --bg: #eef0f3;
+  --bg-hi: #ffffff;
+  --bg-lo: #c7cbd1;
+  --text: #1c1d20;
+  --text-soft: #767a82;
+  --accent: #b52b0e;
+  --accent-soft: rgba(181, 43, 14, 0.12);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-full: 999px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+
+.top { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.top .logo { width: 48px; height: 48px; }
+.top h1 { margin: 0; font-size: 22px; letter-spacing: .2px; }
+.top .sub { margin: 2px 0 0; font-size: 13px; color: var(--text-soft); }
+
+.grid { display: flex; flex-direction: column; gap: 20px; }
+
+.card {
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  box-shadow: 8px 8px 18px var(--bg-lo), -8px -8px 18px var(--bg-hi);
+  padding: 22px 24px;
+}
+.card h2 {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.row {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 12px 0;
+}
+.row + .row { border-top: 1px solid rgba(0,0,0,.05); }
+.row-title { font-size: 13.5px; font-weight: 600; }
+.badge-exp {
+  display: inline-block; margin-left: 6px;
+  font-size: 9.5px; font-weight: 700; letter-spacing: .3px; text-transform: uppercase;
+  color: var(--accent); background: var(--accent-soft);
+  border-radius: 999px; padding: 2px 7px; vertical-align: middle;
+}
+.row-hint { font-size: 12px; color: var(--text-soft); margin-top: 3px; line-height: 1.4; max-width: 480px; }
+
+.hint { font-size: 12.5px; color: var(--text-soft); line-height: 1.5; margin: 0 0 14px; }
+.hint.muted { font-style: italic; }
+.hint code { background: rgba(0,0,0,.06); padding: 1px 5px; border-radius: 4px; font-size: 11.5px; }
+
+/* switch (тот же паттерн, что и в попапе) */
+.switch { position: relative; display: inline-block; width: 46px; height: 26px; flex-shrink: 0; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; inset: 0; cursor: pointer;
+  background: var(--bg); border-radius: var(--radius-full);
+  box-shadow: inset 3px 3px 6px var(--bg-lo), inset -3px -3px 6px var(--bg-hi);
+  transition: background .2s ease;
+}
+.slider::before {
+  content: ""; position: absolute; left: 3px; top: 3px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--bg);
+  box-shadow: 2px 2px 5px var(--bg-lo), -2px -2px 5px var(--bg-hi);
+  transition: transform .2s ease, background .2s ease;
+}
+.switch input:checked + .slider::before { transform: translateX(20px); background: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+
+/* stats */
+.stats { display: flex; gap: 14px; }
+.stat {
+  flex: 1;
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  box-shadow: inset 3px 3px 7px var(--bg-lo), inset -3px -3px 7px var(--bg-hi);
+  padding: 16px; text-align: center;
+}
+.stat-num { display: block; font-size: 24px; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+.stat-label { display: block; font-size: 11.5px; color: var(--text-soft); margin-top: 4px; }
+
+/* whitelist */
+.whitelist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.whitelist li {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  box-shadow: inset 2px 2px 5px var(--bg-lo), inset -2px -2px 5px var(--bg-hi);
+  padding: 9px 12px;
+  font-size: 13px;
+}
+.whitelist .remove-btn {
+  border: none; background: none; color: var(--accent);
+  font-size: 12px; font-weight: 600; cursor: pointer; padding: 4px 6px;
+}
+
+/* custom rules */
+.rules-box {
+  width: 100%; min-height: 110px; resize: vertical;
+  background: var(--bg);
+  border: none; border-radius: var(--radius-md);
+  box-shadow: inset 3px 3px 7px var(--bg-lo), inset -3px -3px 7px var(--bg-hi);
+  padding: 12px 14px;
+  font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+  font-size: 12.5px; color: var(--text);
+  outline: none;
+}
+.rules-box:focus { box-shadow: inset 3px 3px 7px var(--bg-lo), inset -3px -3px 7px var(--bg-hi), 0 0 0 2px var(--accent-soft); }
+
+.row-actions { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+.saved-msg { font-size: 12px; color: var(--accent); opacity: 0; transition: opacity .2s ease; }
+.saved-msg.show { opacity: 1; }
+
+.btn {
+  border: none; border-radius: var(--radius-full);
+  padding: 10px 18px; font-size: 13px; font-weight: 700;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px var(--bg-lo), -4px -4px 10px var(--bg-hi);
+}
+.btn:active { box-shadow: inset 3px 3px 6px var(--bg-lo), inset -3px -3px 6px var(--bg-hi); }
+.btn-accent { background: var(--accent); color: #fff; }
+
+/* about / donate */
+.about-text { font-size: 13px; line-height: 1.6; color: var(--text); margin: 0 0 14px; }
+.dev-block, .donate-block {
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  box-shadow: inset 3px 3px 7px var(--bg-lo), inset -3px -3px 7px var(--bg-hi);
+  padding: 6px 16px;
+  margin-bottom: 14px;
+}
+.dev-row { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; }
+.dev-row + .dev-row { border-top: 1px solid rgba(0,0,0,.05); }
+.dev-k { font-size: 12px; color: var(--text-soft); }
+.dev-v { font-size: 13px; font-weight: 600; font-family: "SFMono-Regular", Consolas, Menlo, monospace; }
+
+/* ---------- язык ---------- */
+.lang-select {
+  width: 100%; padding: 10px 12px;
+  background: var(--bg); color: var(--text);
+  border: none; border-radius: var(--radius-md);
+  box-shadow: inset 3px 3px 7px var(--bg-lo), inset -3px -3px 7px var(--bg-hi);
+  font-size: 13px; font-family: inherit;
+  outline: none; cursor: pointer;
+}
+
+/* ---------- RTL (арабский и другие языки справа-налево) ---------- */
+[dir="rtl"] .slider::before { left: auto; right: 3px; }
+[dir="rtl"] .switch input:checked + .slider::before { transform: translateX(-20px); }
+[dir="rtl"] .badge-exp { margin-left: 0; margin-right: 6px; }
