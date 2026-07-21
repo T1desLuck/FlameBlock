@@ -1,0 +1,140 @@
+{
+  "extName": {
+    "message": "FlameBlock — حاجب الإعلانات"
+  },
+  "extDescription": {
+    "message": "حاجب إعلانات ومتتبعات متقدم. يعمل محليًا بالكامل — لا تُجمع أو تُرسل أي بيانات إلى أي جهة."
+  },
+  "pause_all_title": {
+    "message": "إيقاف مؤقت في كل مكان"
+  },
+  "resume_protection_title": {
+    "message": "استئناف الحماية"
+  },
+  "this_site": {
+    "message": "هذا الموقع"
+  },
+  "protection_on": {
+    "message": "الحماية مفعّلة"
+  },
+  "ads_allowed_here": {
+    "message": "الإعلانات مسموح بها في هذا الموقع"
+  },
+  "on_page": {
+    "message": "في هذه الصفحة"
+  },
+  "total_blocked_label": {
+    "message": "إجمالي المحظور"
+  },
+  "reload_page": {
+    "message": "إعادة تحميل الصفحة"
+  },
+  "extension_settings": {
+    "message": "إعدادات الإضافة"
+  },
+  "options_subtitle": {
+    "message": "الإعدادات المتقدمة للإضافة"
+  },
+  "section_language": {
+    "message": "اللغة"
+  },
+  "language_hint": {
+    "message": "تُحدَّد تلقائيًا حسب لغة المتصفح. يمكنك أيضًا اختيارها يدويًا — وسيُحفظ اختيارك."
+  },
+  "language_auto": {
+    "message": "تلقائي (افتراضي)"
+  },
+  "section_main_settings": {
+    "message": "الإعدادات الرئيسية"
+  },
+  "master_enabled_title": {
+    "message": "الإضافة مفعّلة"
+  },
+  "master_enabled_hint": {
+    "message": "المفتاح الرئيسي. أوقفه لتعطيل FlameBlock مؤقتًا في كل مكان."
+  },
+  "block_ads_title": {
+    "message": "حظر الإعلانات"
+  },
+  "block_ads_hint": {
+    "message": "حظر على مستوى الشبكة للطلبات الموجّهة إلى شبكات إعلانية معروفة."
+  },
+  "block_trackers_title": {
+    "message": "حظر المتتبعات"
+  },
+  "block_trackers_hint": {
+    "message": "يحظر عدّادات التحليلات وسكريبتات تتبع السلوك على المواقع."
+  },
+  "stealth_mode_title": {
+    "message": "وضع التخفي"
+  },
+  "stealth_mode_hint": {
+    "message": "يحظر سكريبتات كشف حاجبات الإعلانات المعروفة على مستوى الشبكة، ويُدرج سكريبتًا خفيفًا مباشرة في الصفحة (بوابة على window.open ضد النوافذ المنبثقة الخلفية وإعادة التوجيه القسري). تُحدَّث قائمة الخدمات بمرور الوقت — فهذا ليس حلًا نهائيًا أو دائمًا."
+  },
+  "cosmetic_filtering_title": {
+    "message": "الفلترة التجميلية"
+  },
+  "cosmetic_filtering_hint": {
+    "message": "يُخفي الكتل الإعلانية في الصفحة اعتمادًا على أنماط CSS وعلى تسميات قصيرة مثل «إعلان»/«برعاية»، حتى لو لم يكن الأمر طلب شبكة منفصلًا."
+  },
+  "heuristic_iframe_title": {
+    "message": "استدلال حسب حجم الإطار (iframe)"
+  },
+  "badge_experimental": {
+    "message": "تجريبي"
+  },
+  "heuristic_iframe_hint": {
+    "message": "يُخفي إطارات iframe بأحجام إعلانية قياسية (300×250، 728×90 وغيرها) قادمة من نطاق مختلف — يلتقط الإعلانات التي يعرضها الموقع عبر نطاق وكيل خاص به، وهو ما لا تراه القوائم العادية. مُعطَّل افتراضيًا: خطر الإيجابيات الكاذبة أعلى منه في القوائم."
+  },
+  "section_stats": {
+    "message": "الإحصائيات"
+  },
+  "stat_total_blocked": {
+    "message": "إجمالي المحظور"
+  },
+  "stat_since": {
+    "message": "الإضافة تعمل منذ"
+  },
+  "section_whitelist": {
+    "message": "المواقع المسموح بها"
+  },
+  "whitelist_hint": {
+    "message": "لقد سمحت بعرض الإعلانات في هذه المواقع — يمكنك العثور على المفتاح في نافذة الإضافة المنبثقة."
+  },
+  "whitelist_empty": {
+    "message": "القائمة فارغة."
+  },
+  "remove_button": {
+    "message": "إزالة"
+  },
+  "section_custom_rules": {
+    "message": "قواعد مخصّصة"
+  },
+  "custom_rules_hint": {
+    "message": "قاعدة واحدة في كل سطر. كتابة النطاق فقط — يحظره، وكتابة <code>@@النطاق</code> — تسمح به صراحةً (إن حُظر شيء عن طريق الخطأ). الأسطر التي تبدأ بـ <code>!</code> تُعدّ تعليقات."
+  },
+  "save_rules_button": {
+    "message": "حفظ القواعد"
+  },
+  "rules_saved": {
+    "message": "تم الحفظ ({count})"
+  },
+  "section_about": {
+    "message": "حول الإضافة"
+  },
+  "about_text_1": {
+    "message": "FlameBlock إضافة مستقلة بالكامل. تُحفظ جميع القواعد والإعدادات محليًا في متصفحك، ولا تُرسل أو تُجمع أي بيانات إلى أي جهة. يحتوي الأرشيف أيضًا على SPEC.md (شرح لكيفية بناء كل شيء) وRESEARCH.md (تحليل لتقنيات الحظر وما هو قابل للتطبيق فعليًا على Chrome/Opera) لمن يهتم بالتفاصيل."
+  },
+  "about_text_2": {
+    "message": "الإضافة مجانية بالكامل للجميع، وستظل كذلك دائمًا. إذا كانت مفيدة لك ورغبت في دعم تطويرها، سنكون ممتنين جدًا — لكن هذا الأمر يعود إليك تمامًا."
+  },
+  "dev_label": {
+    "message": "المطوّر"
+  },
+  "email_label": {
+    "message": "البريد الإلكتروني"
+  },
+  "bic_label": {
+    "message": "BIC"
+  }
+}

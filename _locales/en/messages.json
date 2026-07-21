@@ -1,0 +1,140 @@
+{
+  "extName": {
+    "message": "FlameBlock — Ad Blocker"
+  },
+  "extDescription": {
+    "message": "Advanced ad & tracker blocker. Fully local — no data is ever collected or sent anywhere."
+  },
+  "pause_all_title": {
+    "message": "Pause everywhere"
+  },
+  "resume_protection_title": {
+    "message": "Resume protection"
+  },
+  "this_site": {
+    "message": "This site"
+  },
+  "protection_on": {
+    "message": "Protection is on"
+  },
+  "ads_allowed_here": {
+    "message": "Ads are allowed on this site"
+  },
+  "on_page": {
+    "message": "on this page"
+  },
+  "total_blocked_label": {
+    "message": "total blocked"
+  },
+  "reload_page": {
+    "message": "Reload page"
+  },
+  "extension_settings": {
+    "message": "Extension settings"
+  },
+  "options_subtitle": {
+    "message": "Advanced extension settings"
+  },
+  "section_language": {
+    "message": "Language"
+  },
+  "language_hint": {
+    "message": "Detected automatically from your browser's language. You can also pick one manually — your choice is remembered."
+  },
+  "language_auto": {
+    "message": "Auto (default)"
+  },
+  "section_main_settings": {
+    "message": "Main settings"
+  },
+  "master_enabled_title": {
+    "message": "Extension enabled"
+  },
+  "master_enabled_hint": {
+    "message": "Master switch. Turn it off to temporarily disable FlameBlock everywhere."
+  },
+  "block_ads_title": {
+    "message": "Ad blocking"
+  },
+  "block_ads_hint": {
+    "message": "Network-level blocking of requests to known ad networks."
+  },
+  "block_trackers_title": {
+    "message": "Tracker blocking"
+  },
+  "block_trackers_hint": {
+    "message": "Blocks analytics counters and behavior-tracking scripts on websites."
+  },
+  "stealth_mode_title": {
+    "message": "Stealth mode"
+  },
+  "stealth_mode_hint": {
+    "message": "Blocks known anti-adblock scripts at the network level and injects a lightweight scriptlet directly into the page (a gate on window.open against pop-unders and forced redirects). The service list gets updated over time — it's not a one-time or permanent fix."
+  },
+  "cosmetic_filtering_title": {
+    "message": "Cosmetic filtering"
+  },
+  "cosmetic_filtering_hint": {
+    "message": "Hides ad blocks on the page by CSS patterns and by short labels like \"Ad\"/\"Sponsored\", even when it isn't a separate network request."
+  },
+  "heuristic_iframe_title": {
+    "message": "Iframe-size heuristic"
+  },
+  "badge_experimental": {
+    "message": "experimental"
+  },
+  "heuristic_iframe_hint": {
+    "message": "Hides iframes with standard ad sizes (300×250, 728×90, etc.) served from a different domain — catches ads a site serves through its own proxy domain, which regular lists can't see. Off by default: the risk of false positives is higher than with lists."
+  },
+  "section_stats": {
+    "message": "Statistics"
+  },
+  "stat_total_blocked": {
+    "message": "blocked in total"
+  },
+  "stat_since": {
+    "message": "extension running since"
+  },
+  "section_whitelist": {
+    "message": "Allowed sites"
+  },
+  "whitelist_hint": {
+    "message": "You've allowed ads to show on these sites — you'll find the toggle in the extension's popup."
+  },
+  "whitelist_empty": {
+    "message": "The list is empty."
+  },
+  "remove_button": {
+    "message": "Remove"
+  },
+  "section_custom_rules": {
+    "message": "Custom rules"
+  },
+  "custom_rules_hint": {
+    "message": "One rule per line. A plain domain — blocks it, <code>@@domain</code> — explicitly allows it (if something got blocked by mistake). Lines starting with <code>!</code> are comments."
+  },
+  "save_rules_button": {
+    "message": "Save rules"
+  },
+  "rules_saved": {
+    "message": "Saved ({count})"
+  },
+  "section_about": {
+    "message": "About"
+  },
+  "about_text_1": {
+    "message": "FlameBlock is a fully self-contained extension. All rules and settings are stored locally in your browser — nothing is ever sent anywhere or collected. The archive also includes SPEC.md (how everything is built) and RESEARCH.md (a breakdown of blocking techniques and what's actually feasible on Chrome/Opera) for anyone curious about the details."
+  },
+  "about_text_2": {
+    "message": "The extension is completely free for everyone and always will be. If it's been useful to you and you'd like to support development, we'd be very grateful — but that's entirely up to you."
+  },
+  "dev_label": {
+    "message": "Developer"
+  },
+  "email_label": {
+    "message": "Email"
+  },
+  "bic_label": {
+    "message": "BIC"
+  }
+}

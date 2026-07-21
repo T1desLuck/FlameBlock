@@ -1,0 +1,140 @@
+{
+  "extName": {
+    "message": "FlameBlock — Werbeblocker"
+  },
+  "extDescription": {
+    "message": "Fortschrittlicher Werbe- und Tracker-Blocker. Läuft komplett lokal — es werden keine Daten gesammelt oder gesendet."
+  },
+  "pause_all_title": {
+    "message": "Überall pausieren"
+  },
+  "resume_protection_title": {
+    "message": "Schutz fortsetzen"
+  },
+  "this_site": {
+    "message": "Diese Website"
+  },
+  "protection_on": {
+    "message": "Schutz ist aktiv"
+  },
+  "ads_allowed_here": {
+    "message": "Werbung ist auf dieser Website erlaubt"
+  },
+  "on_page": {
+    "message": "auf dieser Seite"
+  },
+  "total_blocked_label": {
+    "message": "insgesamt blockiert"
+  },
+  "reload_page": {
+    "message": "Seite neu laden"
+  },
+  "extension_settings": {
+    "message": "Erweiterungseinstellungen"
+  },
+  "options_subtitle": {
+    "message": "Erweiterte Einstellungen der Erweiterung"
+  },
+  "section_language": {
+    "message": "Sprache"
+  },
+  "language_hint": {
+    "message": "Wird automatisch anhand der Sprache deines Browsers erkannt. Du kannst die Sprache auch manuell wählen — die Auswahl wird gespeichert."
+  },
+  "language_auto": {
+    "message": "Automatisch (Standard)"
+  },
+  "section_main_settings": {
+    "message": "Grundeinstellungen"
+  },
+  "master_enabled_title": {
+    "message": "Erweiterung aktiviert"
+  },
+  "master_enabled_hint": {
+    "message": "Hauptschalter. Schalte ihn aus, um FlameBlock vorübergehend überall zu deaktivieren."
+  },
+  "block_ads_title": {
+    "message": "Werbeblockierung"
+  },
+  "block_ads_hint": {
+    "message": "Blockiert Anfragen an bekannte Werbenetzwerke auf Netzwerkebene."
+  },
+  "block_trackers_title": {
+    "message": "Tracker-Blockierung"
+  },
+  "block_trackers_hint": {
+    "message": "Blockiert Analyse-Zähler und Skripte zur Verhaltensverfolgung auf Websites."
+  },
+  "stealth_mode_title": {
+    "message": "Stealth-Modus"
+  },
+  "stealth_mode_hint": {
+    "message": "Blockiert bekannte Anti-Adblock-Skripte auf Netzwerkebene und injiziert ein leichtgewichtiges Scriptlet direkt in die Seite (eine Sperre für window.open gegen Popunder und erzwungene Weiterleitungen). Die Liste der Dienste wird laufend aktualisiert — das ist keine einmalige oder dauerhafte Lösung."
+  },
+  "cosmetic_filtering_title": {
+    "message": "Kosmetische Filterung"
+  },
+  "cosmetic_filtering_hint": {
+    "message": "Blendet Werbeblöcke auf der Seite anhand von CSS-Mustern und kurzen Kennzeichnungen wie „Anzeige“/„Sponsored“ aus, auch wenn es sich nicht um eine eigene Netzwerkanfrage handelt."
+  },
+  "heuristic_iframe_title": {
+    "message": "Iframe-Größen-Heuristik"
+  },
+  "badge_experimental": {
+    "message": "experimentell"
+  },
+  "heuristic_iframe_hint": {
+    "message": "Blendet Iframes mit Standard-Werbegrößen (300×250, 728×90 usw.) aus, die von einer anderen Domain stammen — erkennt Werbung, die eine Website über ihre eigene Proxy-Domain ausliefert und die normale Listen nicht sehen. Standardmäßig deaktiviert: Das Risiko von Fehlalarmen ist höher als bei Listen."
+  },
+  "section_stats": {
+    "message": "Statistik"
+  },
+  "stat_total_blocked": {
+    "message": "insgesamt blockiert"
+  },
+  "stat_since": {
+    "message": "Erweiterung aktiv seit"
+  },
+  "section_whitelist": {
+    "message": "Erlaubte Websites"
+  },
+  "whitelist_hint": {
+    "message": "Auf diesen Websites hast du Werbung erlaubt — den Schalter dafür findest du im Popup der Erweiterung."
+  },
+  "whitelist_empty": {
+    "message": "Die Liste ist leer."
+  },
+  "remove_button": {
+    "message": "Entfernen"
+  },
+  "section_custom_rules": {
+    "message": "Eigene Regeln"
+  },
+  "custom_rules_hint": {
+    "message": "Eine Regel pro Zeile. Eine reine Domain — blockiert sie, <code>@@domain</code> — erlaubt sie ausdrücklich (falls versehentlich etwas blockiert wurde). Zeilen mit <code>!</code> sind Kommentare."
+  },
+  "save_rules_button": {
+    "message": "Regeln speichern"
+  },
+  "rules_saved": {
+    "message": "Gespeichert ({count})"
+  },
+  "section_about": {
+    "message": "Über die Erweiterung"
+  },
+  "about_text_1": {
+    "message": "FlameBlock ist eine vollständig eigenständige Erweiterung. Alle Regeln und Einstellungen werden lokal in deinem Browser gespeichert, es werden niemals Daten irgendwohin gesendet oder gesammelt. Im Archiv liegen außerdem SPEC.md (wie alles aufgebaut ist) und RESEARCH.md (eine Analyse der Blockiertechniken und was auf Chrome/Opera tatsächlich umsetzbar ist) für alle, die sich für die Details interessieren."
+  },
+  "about_text_2": {
+    "message": "Die Erweiterung ist für alle vollkommen kostenlos und wird es immer bleiben. Wenn sie dir nützlich war und du die Entwicklung unterstützen möchtest, würden wir uns sehr freuen — das liegt aber ganz bei dir."
+  },
+  "dev_label": {
+    "message": "Entwickler"
+  },
+  "email_label": {
+    "message": "E-Mail"
+  },
+  "bic_label": {
+    "message": "BIC"
+  }
+}

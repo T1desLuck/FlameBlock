@@ -1,0 +1,140 @@
+{
+  "extName": {
+    "message": "FlameBlock — Bloqueador de anúncios"
+  },
+  "extDescription": {
+    "message": "Bloqueador avançado de anúncios e rastreadores. 100% local — nenhum dado é coletado ou enviado."
+  },
+  "pause_all_title": {
+    "message": "Pausar em todos os sites"
+  },
+  "resume_protection_title": {
+    "message": "Retomar a proteção"
+  },
+  "this_site": {
+    "message": "Este site"
+  },
+  "protection_on": {
+    "message": "Proteção ativada"
+  },
+  "ads_allowed_here": {
+    "message": "Anúncios permitidos neste site"
+  },
+  "on_page": {
+    "message": "nesta página"
+  },
+  "total_blocked_label": {
+    "message": "total bloqueado"
+  },
+  "reload_page": {
+    "message": "Recarregar página"
+  },
+  "extension_settings": {
+    "message": "Configurações da extensão"
+  },
+  "options_subtitle": {
+    "message": "Configurações avançadas da extensão"
+  },
+  "section_language": {
+    "message": "Idioma"
+  },
+  "language_hint": {
+    "message": "Detectado automaticamente a partir do idioma do navegador. Você também pode escolher manualmente — a escolha será lembrada."
+  },
+  "language_auto": {
+    "message": "Automático (padrão)"
+  },
+  "section_main_settings": {
+    "message": "Configurações principais"
+  },
+  "master_enabled_title": {
+    "message": "Extensão ativada"
+  },
+  "master_enabled_hint": {
+    "message": "Interruptor geral. Desative para desligar o FlameBlock temporariamente em todos os sites."
+  },
+  "block_ads_title": {
+    "message": "Bloqueio de anúncios"
+  },
+  "block_ads_hint": {
+    "message": "Bloqueio em nível de rede de solicitações para redes de anúncios conhecidas."
+  },
+  "block_trackers_title": {
+    "message": "Bloqueio de rastreadores"
+  },
+  "block_trackers_hint": {
+    "message": "Bloqueia contadores de análise e scripts de rastreamento de comportamento nos sites."
+  },
+  "stealth_mode_title": {
+    "message": "Modo furtivo"
+  },
+  "stealth_mode_hint": {
+    "message": "Bloqueia scripts anti-adblock conhecidos em nível de rede e injeta um scriptlet leve diretamente na página (um controle sobre window.open contra popunders e redirecionamentos forçados). A lista de serviços é atualizada com o tempo — não é uma solução única nem permanente."
+  },
+  "cosmetic_filtering_title": {
+    "message": "Filtragem cosmética"
+  },
+  "cosmetic_filtering_hint": {
+    "message": "Oculta blocos de anúncios na página com base em padrões CSS e em rótulos curtos como \"Anúncio\"/\"Patrocinado\", mesmo quando isso não é uma solicitação de rede separada."
+  },
+  "heuristic_iframe_title": {
+    "message": "Heurística por tamanho de iframe"
+  },
+  "badge_experimental": {
+    "message": "experimental"
+  },
+  "heuristic_iframe_hint": {
+    "message": "Oculta iframes com tamanhos publicitários padrão (300×250, 728×90 etc.) vindos de um domínio diferente — detecta anúncios que o site serve pelo próprio domínio proxy, algo que as listas comuns não enxergam. Desativado por padrão: o risco de falsos positivos é maior do que com as listas."
+  },
+  "section_stats": {
+    "message": "Estatísticas"
+  },
+  "stat_total_blocked": {
+    "message": "bloqueado no total"
+  },
+  "stat_since": {
+    "message": "extensão em funcionamento desde"
+  },
+  "section_whitelist": {
+    "message": "Sites permitidos"
+  },
+  "whitelist_hint": {
+    "message": "Você permitiu a exibição de anúncios nestes sites — o interruptor fica no popup da extensão."
+  },
+  "whitelist_empty": {
+    "message": "A lista está vazia."
+  },
+  "remove_button": {
+    "message": "Remover"
+  },
+  "section_custom_rules": {
+    "message": "Regras personalizadas"
+  },
+  "custom_rules_hint": {
+    "message": "Uma regra por linha. Um domínio simples — bloqueia, <code>@@dominio</code> — permite explicitamente (caso algo tenha sido bloqueado por engano). Linhas com <code>!</code> são comentários."
+  },
+  "save_rules_button": {
+    "message": "Salvar regras"
+  },
+  "rules_saved": {
+    "message": "Salvo ({count})"
+  },
+  "section_about": {
+    "message": "Sobre"
+  },
+  "about_text_1": {
+    "message": "O FlameBlock é uma extensão totalmente autônoma. Todas as regras e configurações ficam armazenadas localmente no seu navegador, nenhum dado é enviado ou coletado. No arquivo também estão o SPEC.md (como tudo foi construído) e o RESEARCH.md (uma análise das técnicas de bloqueio e o que é realmente viável no Chrome/Opera), para quem tiver interesse nos detalhes."
+  },
+  "about_text_2": {
+    "message": "A extensão é totalmente gratuita para todos e sempre será. Se ela foi útil para você e quiser apoiar o desenvolvimento, ficaremos muito gratos — mas isso é totalmente opcional."
+  },
+  "dev_label": {
+    "message": "Desenvolvedor"
+  },
+  "email_label": {
+    "message": "E-mail"
+  },
+  "bic_label": {
+    "message": "BIC"
+  }
+}
