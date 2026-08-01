@@ -1,0 +1,209 @@
+:root {
+  --bg: #eef0f3;
+  --bg-hi: #ffffff;
+  --bg-lo: #c7cbd1;
+  --text: #1c1d20;
+  --text-soft: #767a82;
+  --accent: #b52b0e;
+  --accent-soft: rgba(181, 43, 14, 0.12);
+  --on: #1c9e5b;
+  --on-soft: rgba(28, 158, 91, 0.12);
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --radius-full: 999px;
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --bg: #16171a;
+  --bg-hi: #222327;
+  --bg-lo: #0b0c0d;
+  --text: #f1f2f4;
+  --text-soft: #94979e;
+  --accent: #ff5a36;
+  --accent-soft: rgba(255, 90, 54, 0.16);
+  --on: #22c55e;
+  --on-soft: rgba(34, 197, 94, 0.16);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  animation: fbPopIn .16s ease-out;
+  transition: background .15s ease, color .15s ease;
+}
+
+@keyframes fbPopIn {
+  from { opacity: 0; transform: translateY(-3px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.wrap { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+
+/* ---------- header ---------- */
+
+.head { display: flex; align-items: center; justify-content: space-between; }
+
+.brand { display: flex; align-items: center; gap: 8px; }
+.logo { width: 26px; height: 26px; display: block; }
+.brand-name { font-size: 15px; font-weight: 700; letter-spacing: 0.2px; }
+
+.icon-btn {
+  width: 34px; height: 34px;
+  border: none; border-radius: var(--radius-full);
+  background: var(--bg);
+  color: var(--text-soft);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px var(--bg-lo), -4px -4px 8px var(--bg-hi);
+  transition: box-shadow .15s ease, color .15s ease;
+}
+.icon-btn:active { box-shadow: inset 3px 3px 6px var(--bg-lo), inset -3px -3px 6px var(--bg-hi); }
+.icon-btn.is-paused { color: var(--accent); }
+
+/* ---------- neumorphic surface ---------- */
+
+.neu-out {
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  box-shadow: 6px 6px 14px var(--bg-lo), -6px -6px 14px var(--bg-hi);
+}
+
+/* ---------- hero: сайт + статус + большой тумблер ---------- */
+
+.hero {
+  padding: 18px 16px 16px;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  text-align: center;
+}
+
+.hero-site { display: flex; align-items: center; gap: 7px; min-width: 0; max-width: 100%; }
+.site-favicon { width: 16px; height: 16px; border-radius: 4px; flex-shrink: 0; display: block; }
+.hostname {
+  font-size: 14px; font-weight: 600;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  max-width: 240px;
+}
+
+.hero-status { display: flex; align-items: center; gap: 7px; }
+.site-status { font-size: 12.5px; color: var(--on); font-weight: 600; }
+.site-status.off { color: var(--accent); }
+
+.status-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--on);
+  box-shadow: 0 0 0 4px var(--on-soft);
+  flex-shrink: 0;
+  animation: fbPulse 2.2s ease-in-out infinite;
+}
+.status-dot.off { background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); animation: none; }
+
+@keyframes fbPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .45; }
+}
+
+.switch-lg { width: 52px; height: 30px; margin-top: 2px; }
+.switch-lg .slider::before { width: 24px; height: 24px; }
+.switch-lg input:checked + .slider::before { transform: translateX(22px); }
+[dir="rtl"] .switch-lg input:checked + .slider::before { transform: translateX(-22px); }
+
+/* ---------- toggle switch (базовый, используется и в лого-размере) ---------- */
+
+.switch { position: relative; display: inline-block; width: 46px; height: 26px; flex-shrink: 0; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; inset: 0; cursor: pointer;
+  background: var(--bg);
+  border-radius: var(--radius-full);
+  box-shadow: inset 3px 3px 6px var(--bg-lo), inset -3px -3px 6px var(--bg-hi);
+  transition: background .2s ease;
+}
+.slider::before {
+  content: "";
+  position: absolute; left: 3px; top: 3px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--bg);
+  box-shadow: 2px 2px 5px var(--bg-lo), -2px -2px 5px var(--bg-hi);
+  transition: transform .2s ease, background .2s ease;
+}
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+/* ---------- stats ---------- */
+
+.stats-row { display: flex; gap: 10px; }
+.stat-card {
+  flex: 1;
+  padding: 12px 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+}
+.stat-icon { color: var(--text-soft); opacity: .55; margin-bottom: 1px; }
+.stat-num { font-size: 20px; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+.stat-label { font-size: 10.5px; color: var(--text-soft); text-align: center; }
+
+/* ---------- эвристика iframe — видимое подтверждение работы ---------- */
+
+.iframe-heuristic-row {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 11.5px; color: var(--text-soft);
+  padding: 2px 2px 0;
+}
+.iframe-heuristic-row strong { color: var(--accent); font-variant-numeric: tabular-nums; }
+.iframe-heuristic-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+  flex-shrink: 0;
+}
+
+/* ---------- быстрые действия ---------- */
+
+.quick-actions { display: flex; gap: 8px; }
+.quick-btn {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  background: var(--bg);
+  border: none; border-radius: var(--radius-md);
+  box-shadow: 4px 4px 9px var(--bg-lo), -4px -4px 9px var(--bg-hi);
+  padding: 9px 6px;
+  color: var(--text-soft);
+  font-size: 10.5px; font-weight: 600; line-height: 1.25;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow .15s ease, color .15s ease;
+}
+.quick-btn:hover { color: var(--text); }
+.quick-btn:active { box-shadow: inset 3px 3px 7px var(--bg-lo), inset -3px -3px 7px var(--bg-hi); }
+.quick-btn svg { flex-shrink: 0; }
+
+/* ---------- нижняя кнопка настроек ---------- */
+
+.foot { margin-top: 2px; }
+.settings-btn {
+  width: 100%;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 11px;
+  border: none;
+  color: var(--text);
+  font-size: 13px; font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow .15s ease;
+}
+.settings-btn:active { box-shadow: inset 4px 4px 8px var(--bg-lo), inset -4px -4px 8px var(--bg-hi); }
+.settings-btn svg { color: var(--text-soft); flex-shrink: 0; }
+
+/* ---------- RTL (арабский и другие языки справа-налево) ---------- */
+
+[dir="rtl"] .slider::before { left: auto; right: 3px; }
+[dir="rtl"] .switch input:checked + .slider::before { transform: translateX(-20px); }

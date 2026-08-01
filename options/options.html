@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Настройки FlameBlock</title>
+<link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="shell">
+
+    <header class="dash">
+      <div class="dash-brand">
+        <img src="../icons/icon48.png" alt="" class="dash-logo">
+        <div>
+          <h1>FlameBlock</h1>
+          <p class="dash-sub" data-i18n="options_subtitle">Продвинутые настройки расширения</p>
+        </div>
+      </div>
+      <div class="dash-right">
+        <div class="dash-stats">
+          <div class="dash-stat">
+            <span id="statTotal" class="dash-stat-num">0</span>
+            <span class="dash-stat-label" data-i18n="stat_total_blocked">заблокировано всего</span>
+          </div>
+          <div class="dash-stat">
+            <span id="statSince" class="dash-stat-num dash-stat-num-sm">—</span>
+            <span class="dash-stat-label" data-i18n="stat_since">расширение работает с</span>
+          </div>
+        </div>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Тема">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.42 0l.7.71a1 1 0 1 1-1.41 1.41l-.71-.7a1 1 0 0 1 0-1.42zm13.44 13.44a1 1 0 0 1 1.42 0l.7.71a1 1 0 0 1-1.41 1.41l-.71-.7a1 1 0 0 1 0-1.42zM2 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1zm18 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1zM4.22 19.78a1 1 0 0 1 0-1.42l.7-.71a1 1 0 1 1 1.41 1.41l-.7.71a1 1 0 0 1-1.41 0zM17.66 6.34a1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.42l-.7.7a1 1 0 0 1-1.42 0z"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="app">
+      <nav class="sidebar">
+        <button type="button" class="nav-btn is-active" data-panel="panel-main">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.07-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.3 7.3 0 0 0-1.62-.94l-.36-2.54a.5.5 0 0 0-.5-.42h-3.84a.5.5 0 0 0-.5.42l-.36 2.54c-.59.24-1.13.56-1.62.94l-2.39-.96a.5.5 0 0 0-.61.22L1.63 8.84a.5.5 0 0 0 .12.64L3.78 11.06c-.05.3-.08.62-.08.94s.02.64.07.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32c.14.24.42.32.61.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54a.5.5 0 0 0 .5.42h3.84a.5.5 0 0 0 .5-.42l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.24.1.48 0 .61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z"/></svg>
+          <span data-i18n="nav_main">Основные</span>
+        </button>
+        <button type="button" class="nav-btn" data-panel="panel-sites">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm7.93 9h-3.05c-.13-2.45-.87-4.65-2.02-6.36A8.03 8.03 0 0 1 19.93 11zM12 4c1.36 1.94 2.24 4.32 2.44 7H9.56C9.76 8.32 10.64 5.94 12 4zM4.07 13h3.05c.13 2.45.87 4.65 2.02 6.36A8.03 8.03 0 0 1 4.07 13zm3.05-2H4.07a8.03 8.03 0 0 1 5.07-6.36C7.99 6.35 7.25 8.55 7.12 11zM12 20c-1.36-1.94-2.24-4.32-2.44-7h4.88c-.2 2.68-1.08 5.06-2.44 7zm2.96-.64c1.15-1.71 1.89-3.91 2.02-6.36h3.05a8.03 8.03 0 0 1-5.07 6.36z"/></svg>
+          <span data-i18n="nav_sites">Сайты</span>
+        </button>
+        <button type="button" class="nav-btn" data-panel="panel-rules">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+          <span data-i18n="nav_rules">Правила</span>
+        </button>
+        <button type="button" class="nav-btn" data-panel="panel-about">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+          <span data-i18n="nav_about">О расширении</span>
+        </button>
+      </nav>
+
+      <main class="content">
+
+        <section id="panel-main" class="panel is-active">
+          <div class="card">
+            <h2 data-i18n="section_language">Язык</h2>
+            <p class="hint" data-i18n="language_hint">Определяется автоматически по языку браузера. Можно выбрать вручную — выбор запомнится.</p>
+            <select id="languageSelect" class="lang-select">
+              <option value="" data-i18n="language_auto">Авто (по умолчанию)</option>
+              <option value="ru">Русский</option>
+              <option value="en">English</option>
+              <option value="zh_CN">中文（简体）</option>
+              <option value="es">Español</option>
+              <option value="hi">हिन्दी</option>
+              <option value="ar">العربية</option>
+              <option value="pt_BR">Português (Brasil)</option>
+              <option value="ja">日本語</option>
+              <option value="ko">한국어</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+              <option value="id">Bahasa Indonesia</option>
+            </select>
+          </div>
+
+          <div class="card">
+            <h2 data-i18n="section_main_settings">Основные настройки</h2>
+
+            <div class="row">
+              <div>
+                <div class="row-title" data-i18n="master_enabled_title">Расширение включено</div>
+                <div class="row-hint" data-i18n="master_enabled_hint">Общий выключатель. Выключите, чтобы временно отключить FlameBlock везде.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="masterEnabled"><span class="slider"></span></label>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="row-title" data-i18n="block_ads_title">Блокировка рекламы</div>
+                <div class="row-hint" data-i18n="block_ads_hint">Сетевая блокировка запросов к известным рекламным сетям.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="blockAds"><span class="slider"></span></label>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="row-title" data-i18n="block_trackers_title">Блокировка трекеров</div>
+                <div class="row-hint" data-i18n="block_trackers_hint">Блокирует счётчики и скрипты слежения за поведением на сайтах.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="blockTrackers"><span class="slider"></span></label>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="row-title" data-i18n="stealth_mode_title">Стелс-режим</div>
+                <div class="row-hint" data-i18n="stealth_mode_hint">Блокирует известные анти-adblock скрипты сетевым способом и встраивает лёгкий скриптлет прямо в страницу (гейт на window.open против попандеров/принудительных редиректов). Список сервисов обновляется — не разовое и не вечное решение.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="stealthMode"><span class="slider"></span></label>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="row-title" data-i18n="cosmetic_filtering_title">Косметическая фильтрация</div>
+                <div class="row-hint" data-i18n="cosmetic_filtering_hint">Скрывает рекламные блоки на странице по CSS-паттернам и по коротким меткам вроде «Реклама»/«Sponsored», даже если это не отдельный сетевой запрос.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="cosmeticFiltering"><span class="slider"></span></label>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="row-title"><span data-i18n="heuristic_iframe_title">Эвристика по размеру iframe</span> <span class="badge-exp" data-i18n="badge_experimental">эксперимент</span></div>
+                <div class="row-hint" data-i18n="heuristic_iframe_hint">Скрывает iframe стандартных рекламных размеров (300×250, 728×90 и т.д.) с чужого домена — ловит рекламу через собственный прокси-домен сайта, которую обычные списки не видят. Выключено по умолчанию: риск ложных срабатываний выше, чем у списков.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="heuristicIframes"><span class="slider"></span></label>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="row-title" data-i18n="fingerprint_protection_title">Защита от отпечатка браузера</div>
+                <div class="row-hint" data-i18n="fingerprint_protection_hint">Небольшой незаметный шум в Canvas, WebGL, звуке и измерении шрифтов — сайтам сложнее узнавать вас по уникальным особенностям устройства, даже без файлов cookie.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="fingerprintProtection"><span class="slider"></span></label>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="row-title"><span data-i18n="webrtc_protection_title">Защита от утечки WebRTC</span> <span class="badge-exp" data-i18n="badge_experimental">эксперимент</span></div>
+                <div class="row-hint" data-i18n="webrtc_protection_hint">Скрывает реальный IP-адрес при использовании VPN или прокси. Выключено по умолчанию: может помешать видеозвонкам прямо в браузере (например, Google Meet), если сайт не умеет работать через прокси-соединение.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="webrtcProtection"><span class="slider"></span></label>
+            </div>
+          </div>
+        </section>
+
+        <section id="panel-sites" class="panel">
+          <div class="card">
+            <h2 data-i18n="section_whitelist">Разрешённые сайты</h2>
+            <p class="hint" data-i18n="whitelist_hint">На этих сайтах вы разрешили показ рекламы — переключатель можно найти в попапе расширения.</p>
+            <ul id="whitelistUl" class="whitelist"></ul>
+            <p id="whitelistEmpty" class="hint muted" data-i18n="whitelist_empty">Список пуст.</p>
+          </div>
+        </section>
+
+        <section id="panel-rules" class="panel">
+          <div class="card">
+            <h2 data-i18n="section_custom_rules">Свои правила</h2>
+            <p class="hint" data-i18n-html="custom_rules_hint">Одно правило на строку. Просто домен — заблокировать, <code>@@домен</code> — явно разрешить (если что-то заблокировалось лишнее). Строки с <code>!</code> — комментарии.</p>
+            <textarea id="customRules" class="rules-box" placeholder="example-ads.com&#10;@@needed-domain.com" spellcheck="false"></textarea>
+            <div class="row-actions">
+              <button id="saveRulesBtn" class="btn btn-accent" data-i18n="save_rules_button">Сохранить правила</button>
+              <span id="rulesSaved" class="saved-msg"></span>
+            </div>
+          </div>
+        </section>
+
+        <section id="panel-about" class="panel">
+          <div class="card">
+            <h2 data-i18n="section_about">О расширении</h2>
+
+            <p class="privacy-lead">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 14-4-4 1.41-1.41L10 12.17l6.59-6.59L18 7l-8 8z"/></svg>
+              <span data-i18n="privacy_lead">FlameBlock работает полностью автономно: не выходит в сеть, не отправляет и не собирает никакие данные — даже нам самим.</span>
+            </p>
+
+            <div class="accordion">
+              <div class="accordion-item">
+                <button type="button" class="accordion-trigger" aria-expanded="false">
+                  <span data-i18n="about_what_title">Что делает FlameBlock</span>
+                  <svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+                </button>
+                <div class="accordion-panel">
+                  <p data-i18n="about_what_body">Блокирует рекламу, всплывающие окна и скрытых «наблюдателей» (трекеров) почти на любом сайте — баннеры, видеоролики, встроенные блоки. Работает в фоне, не замедляет браузер и не мешает пользоваться сайтами.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button type="button" class="accordion-trigger" aria-expanded="false">
+                  <span data-i18n="about_privacy_title">Куда уходят ваши данные</span>
+                  <svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+                </button>
+                <div class="accordion-panel">
+                  <p data-i18n="about_privacy_body">Никуда. У расширения нет своего сервера, оно не передаёт статистику, не показывает рекламу вместо чужой и не следит за тем, что вы делаете в браузере. Все настройки и счётчики хранятся только на вашем устройстве.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button type="button" class="accordion-trigger" aria-expanded="false">
+                  <span data-i18n="about_how_title">Как это устроено внутри</span>
+                  <svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+                </button>
+                <div class="accordion-panel">
+                  <p data-i18n="about_how_body">Основная блокировка идёт через встроенный движок самого браузера — он сверяет каждый запрос со списками известных рекламных и трекинговых серверов ещё до загрузки. Дополнительно расширение прячет рекламные блоки прямо на странице и распознаёт рекламу по типичным признакам, даже если её не было в списках.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button type="button" class="accordion-trigger" aria-expanded="false">
+                  <span data-i18n="about_stealth_title">Что такое стелс-режим</span>
+                  <svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+                </button>
+                <div class="accordion-panel">
+                  <p data-i18n="about_stealth_body">Некоторые сайты проверяют, стоит ли у вас блокировщик, и просят его отключить. Стелс-режим мешает такой проверке сработать, чтобы сайт продолжал открываться как обычно.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button type="button" class="accordion-trigger" aria-expanded="false">
+                  <span data-i18n="about_sources_title">Откуда берутся списки блокировки</span>
+                  <svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+                </button>
+                <div class="accordion-panel">
+                  <p data-i18n="about_sources_body">Используются те же проверенные сообществом списки, что и у крупных блокировщиков рекламы, плюс собственные дополнения и точечные исправления по мере обнаружения пропусков.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button type="button" class="accordion-trigger" aria-expanded="false">
+                  <span data-i18n="about_limits_title">Что мы намеренно не трогаем</span>
+                  <svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+                </button>
+                <div class="accordion-panel">
+                  <p data-i18n="about_limits_body">Часть общих технических адресов (например, воспроизведение видео на YouTube или вход через соцсети на чужих сайтах) мы сознательно не блокируем — заблокировать их было бы проще, но это сломало бы обычную работу сайтов, а не только рекламу.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dev-block">
+              <div class="dev-row"><span class="dev-k" data-i18n="dev_label">Разработчик</span><span class="dev-v">Барков Н.С.</span></div>
+              <div class="dev-row"><span class="dev-k" data-i18n="email_label">Почта</span><span class="dev-v">tidesluck@icloud.com</span></div>
+            </div>
+            <p class="about-text" data-i18n="about_text_2">
+              Расширение абсолютно бесплатно для всех и всегда будет таким. Если оно вам
+              пригодилось и есть желание поддержать разработку — будем очень благодарны, но это
+              исключительно на ваше усмотрение.
+            </p>
+            <div class="donate-block">
+              <div class="dev-row"><span class="dev-k">PayPal</span><span class="dev-v">tidesluck@icloud.com</span></div>
+              <div class="dev-row"><span class="dev-k">IBAN</span><span class="dev-v">KZ64722C000022655586</span></div>
+              <div class="dev-row"><span class="dev-k" data-i18n="bic_label">БИК</span><span class="dev-v">CASPKZKA</span></div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="../common.js"></script>
+  <script src="../i18n.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
