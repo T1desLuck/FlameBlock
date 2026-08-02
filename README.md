@@ -70,7 +70,7 @@ FlameBlock — расширение для Chrome и Opera на Manifest V3, к�
 
 **Из магазина расширений** (рекомендуется):
 
-- Chrome Web Store — `TODO: вставить ссылку на карточку в сторе`
+- Chrome Web Store — `https://chromewebstore.google.com/detail/bodhfehapbebidhnabmcnhfopfkoefne`
 - Opera Add-ons — `TODO: вставить ссылку на карточку в сторе`
 
 **Вручную, в режиме разработчика** (для тестирования локальной сборки):
