@@ -4,7 +4,7 @@
 
 <br><br>
 
-<img src="image/ICON.png" width="88" alt="FlameBlock">
+<img src="image/Иконка.png" width="88" alt="FlameBlock">
 
 # FlameBlock
 
