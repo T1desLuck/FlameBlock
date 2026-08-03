@@ -12,7 +12,7 @@
 
 [![Manifest](https://img.shields.io/badge/manifest-v3-b52b0e?style=flat-square)](manifest.json)
 [![Version](https://img.shields.io/badge/version-1.14.0-f04a1c?style=flat-square)]()
-[![Chrome](https://img.shields.io/badge/Chrome-102%2B-ffa14f?style=flat-square)]()
+[![Chrome](https://img.shields.io/badge/Chrome-102%2B-ffa14f?style=flat-square)](https://chromewebstore.google.com/detail/bodhfehapbebidhnabmcnhfopfkoefne)
 [![Opera](https://img.shields.io/badge/Opera-поддерживается-ffa14f?style=flat-square)]()
 [![Данные](https://img.shields.io/badge/данные-не%20собираются-1fa971?style=flat-square)](https://t1desluck.github.io/FlameBlock/privacy.html)
 [![Языки](https://img.shields.io/badge/языки-12-1c2029?style=flat-square)]()
